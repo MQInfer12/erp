@@ -1,4 +1,3 @@
-import IconConfig from "../../../icons/iconConfig";
 import IconHome from "../../../icons/iconHome";
 import IconUser from "../../../icons/iconUser";
 

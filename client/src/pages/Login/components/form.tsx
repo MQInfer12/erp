@@ -2,10 +2,16 @@ import { Formik, Form as FormikForm } from "formik"
 import { LoginForm, loginSchema } from "../validations/login"
 import Input from "./input"
 import Button from "./button"
+import { useNavigate } from "react-router-dom"
+import { successAlert } from "../../../utilities/alerts"
 
 const Form = () => {
+  const navigate = useNavigate();
+
   const handleSubmit = (values: LoginForm) => {
-    console.log(values)
+    console.log(values);
+    successAlert("Inicio de sesión correcto");
+    navigate("/dashboard/inicio");
   }
 
   return (
