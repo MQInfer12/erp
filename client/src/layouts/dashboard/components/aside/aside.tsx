@@ -14,10 +14,12 @@ const Aside = ({ open }: Props) => {
     <aside
       className={
         styles.aside +
-        " z-50 isolate grid grid-cols-[auto_1fr] w-80 h-screen bg-gray-700 border-r border-gray-800 fixed lg:static "
+        ` z-50 isolate grid grid-cols-[auto_1fr] w-80 h-screen bg-gray-700 border-r border-gray-800 fixed lg:static ${
+          open ? "translate-x-0" : "-translate-x-full"
+        } lg:translate-x-0`
       }
     >
-      <div className="fixed top-0 left-0 w-screen h-screen bg-black opacity-20 -z-10 lg:hidden" />
+      {/* <div className="fixed top-0 left-0 w-screen h-screen bg-black opacity-20 -z-10 lg:hidden" /> */}
       <Left page={page} setPage={setPage} />
       <Right page={page} />
     </aside>
