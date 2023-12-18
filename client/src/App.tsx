@@ -8,7 +8,11 @@ function App() {
       <Routes>
         <Route path="" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />}>
-          <Route path="" element={<div>Main</div>} />
+          <Route path="/dashboard/inicio" element={<div>Inicio</div>} />
+          <Route path="/dashboard/videos" element={<div>Videos</div>} />
+          <Route path="/dashboard/imagenes" element={<div>Imágenes</div>} />
+          <Route path="/dashboard/usuarios" element={<div>Usuarios</div>} />
+          <Route path="/dashboard/roles" element={<div>Roles</div>} />
         </Route>
       </Routes>
     </BrowserRouter>
